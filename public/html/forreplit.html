@@ -1,0 +1,55 @@
+
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    	<a-assets>
+       <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg"
+        crossorigin="anonymous" />
+      <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous" />
+      
+      <a-asset-item id="speaker" src="speaker.gltf"></a-asset-item>
+      <a-asset-item id="couch" src="couch/scene.gltf"></a-asset-item>
+      
+  	</a-assets>
+
+ <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+
+    	<a-gui-button
+		width="2.5" 
+		height="0.7" 
+		base-depth="0.025" 
+		depth="0.1"
+		gap="0.1"
+    key-code="32"
+		value="Sample Button"
+    font-family="Arial"
+		font-size="0.25"
+		margin="0 0 0.05 0"
+
+		font-color="black"
+		active-color="red"
+		hover-color="yellow"
+		border-color="white"
+		focus-color="black"
+		background-color="orange"
+position = "0 -0.5 -5"
+	
+	>
+	</a-gui-button>
+  
+  <a-entity gltf-model="#speaker" position = "0 0 0" scale = "0.002 0.002 0.002"></a-entity>
+
+<a-entity gltf-model="#couch" position = "0 0 0" scale = "10 10 15"></a-entity>
+
+  <a-text value= "Hello Panda" scale = "4 4 4" position = "0 5 -5" rotation = "0 0 0"></a-text>
+  
+      <a-sky src="#sky"</a-sky>
+  
+
+  </a-scene>
+</body>
+</html>
