@@ -76,6 +76,7 @@ app.post("/searching", urlencoded, (req, res) => {
   //         console.log("hello")
   //     res.render('shop');
   //     }});
+
   var newarr1 = [];
   db.collection("products")
     .find({})
@@ -380,6 +381,10 @@ app.get("/products", (req, res) => {
 });
 app.get("/samsungj7", (req, res) => {
   res.sendFile("public/html/samsungj7.html", { root: __dirname });
+});
+
+app.get("/beds", function (req, res) {
+  res.sendFile("public/html/beds.html", { root: __dirname });
 });
 app.get("/jblspeaker", (req, res) => {
   res.sendFile("public/html/jblspeaker.html", { root: __dirname });
