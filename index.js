@@ -392,7 +392,9 @@ app.get("/jblspeaker", (req, res) => {
 app.get("/sonytv", (req, res) => {
   res.sendFile("public/html/sonytv.html", { root: __dirname });
 });
-
+app.get("/samsungj7asset", (req, res) => {
+  res.download("public/3dmodels/mobiles/iphone.glb", { root: __dirname });
+});
 app.get("/arview", (req, res) => {
   res.sendFile("public/html/arview.html", { root: __dirname });
 });
